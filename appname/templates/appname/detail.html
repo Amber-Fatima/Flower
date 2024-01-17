@@ -1,0 +1,23 @@
+{% include 'appname/navbar.html'%}
+
+<div class="row">
+    <div class="card product-card col-md-6">
+        <img height="260px" src="{{item.image}}" alt="yyyy" class="card-img-top" >
+    </div>
+        <div class="col-md-6">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text"> {{ item.item_desc}}</p>
+            <p class="card-text">Price: {{ item.price}}</p>
+            <p class="card-text">From :{{item.user_name}}</p>
+        
+        <a href="{% url 'appname:up_items' item.id %}" class="btn btn-primary">Update</a>
+        <a href="{% url 'appname:del_items' item.id %}" class="btn btn-primary">Delete</a>
+
+    
+        </div>
+    
+</div>
+
+
+</body>
+</html>

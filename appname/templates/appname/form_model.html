@@ -1,0 +1,7 @@
+<!-- #form for adding and updating item -->
+
+<form method="post">
+     {% csrf_token %}<!--for security -->
+     {{form}}
+     <button type="submit">Save</button>
+</form>
